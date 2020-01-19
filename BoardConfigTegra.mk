@@ -17,6 +17,9 @@
 # Audio
 USE_XML_AUDIO_POLICY_CONF := 1
 
+# Exclude AudioFX
+TARGET_EXCLUDES_AUDIOFX := true
+
 # Bluetooth
 ifeq ($(TARGET_TEGRA_BT),bcm)
 BOARD_HAVE_BLUETOOTH     := true
