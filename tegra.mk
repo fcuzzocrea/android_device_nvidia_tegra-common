@@ -68,6 +68,18 @@ PRODUCT_PACKAGES += \
     msd_audio_policy_configuration.xml
 endif
 
+# Bluetooth
+ifeq ($(TARGET_TEGRA_BT),bcm)
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
+    frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml \
+
+PRODUCT_PACKAGES += \
+    libbt-vendor \
+    android.hardware.bluetooth@1.0-service \
+    android.hardware.bluetooth@1.0-impl
+endif
+
 # Graphics
 ifeq ($(TARGET_TEGRA_GPU),drm)
 PRODUCT_PACKAGES += \
