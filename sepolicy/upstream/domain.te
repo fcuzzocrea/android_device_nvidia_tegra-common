@@ -23,7 +23,7 @@ get_prop(domain, surfaceflinger_prop)
 allow domain debugfs_clock:dir search;
 allow domain debugfs_edp:dir search;
 
-allow { domain -isolated_app -ephemeral_app -untrusted_app -untrusted_app_25 -untrusted_app_27 -untrusted_v2_app -mediaprovider } proc_version:file r_file_perms;
+allow { domain -isolated_app -ephemeral_app -untrusted_app -untrusted_app_25 -untrusted_app_27 -mediaprovider -runas_app } proc_version:file r_file_perms;
 allow domain rootfs:lnk_file getattr;
 
 # Allow domains to search debugfs_nvmap directory
