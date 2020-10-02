@@ -150,6 +150,9 @@ PRODUCT_PACKAGES += \
     vendor.nvidia.hardware.power@1.0-service
 endif
 
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += device/nvidia/tegra-common
+
 # Vendor seccomp policy files for media components:
 PRODUCT_COPY_FILES += \
     device/nvidia/tegra-common/seccomp/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
